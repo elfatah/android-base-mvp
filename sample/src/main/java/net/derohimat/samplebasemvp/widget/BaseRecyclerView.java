@@ -1,4 +1,4 @@
-package net.derohimat.baseapp.ui.view;
+package net.derohimat.samplebasemvp.widget;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;

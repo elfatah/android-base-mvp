@@ -5,7 +5,7 @@
               android:background="@color/app_window_bglight_color"
     >
 
-    <net.derohimat.baseapp.ui.view.BaseRecyclerView
+    <net.derohimat.samplebasemvp.widget.BaseRecyclerView
         android:id="@+id/recyclerview_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

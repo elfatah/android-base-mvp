@@ -18,7 +18,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
 
-public interface APIService {
+public interface ApiService {
 
     String ENDPOINT = "http://api.openweathermap.org/";
     String API_KEY = "aa9af8d39d6519b1d47dec305bd253a4";
@@ -34,7 +34,7 @@ public interface APIService {
 
     class Factory {
 
-        public static APIService create(Context context) {
+        public static ApiService create(Context context) {
 
             OkHttpClient.Builder builder = new OkHttpClient().newBuilder();
             builder.readTimeout(30, TimeUnit.SECONDS);
@@ -67,13 +67,13 @@ public interface APIService {
             OkHttpClient client = builder.build();
 
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(APIService.ENDPOINT)
+                    .baseUrl(ApiService.ENDPOINT)
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();
 
-            return retrofit.create(APIService.class);
+            return retrofit.create(ApiService.class);
         }
     }
 }

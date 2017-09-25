@@ -1,9 +1,9 @@
-package net.derohimat.baseapp.ui.view;
+package net.derohimat.samplebasemvp.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
@@ -19,7 +19,7 @@ import com.bumptech.glide.request.target.Target;
  * GitHub     : https://github.com/derohimat
  * LinkedIn   : https://www.linkedin.com/in/derohimat
  */
-public class BaseImageView extends ImageView {
+public class BaseImageView extends AppCompatImageView {
     private String mImageUrl;
 
     public BaseImageView(Context context) {

@@ -21,8 +21,7 @@ import timber.log.Timber;
 
 public class BaseApplication extends Application {
 
-    @Inject
-    EventBus mEventBus;
+    @Inject EventBus mEventBus;
     private Scheduler mScheduler;
     private ApplicationComponent mApplicationComponent;
 

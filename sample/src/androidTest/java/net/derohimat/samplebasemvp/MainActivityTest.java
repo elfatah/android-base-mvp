@@ -4,7 +4,7 @@ import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import net.derohimat.samplebasemvp.data.remote.APIService;
+import net.derohimat.samplebasemvp.data.remote.ApiService;
 import net.derohimat.samplebasemvp.data.remote.model.weather.WeatherPojo;
 import net.derohimat.samplebasemvp.view.activity.main.MainActivity;
 
@@ -32,7 +32,7 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> activityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Inject
-    APIService apiService;
+    ApiService apiService;
 
     @Before
     public void setUp() {

@@ -2,7 +2,7 @@ package net.derohimat.samplebasemvp.di.module;
 
 import net.derohimat.samplebasemvp.BaseApplication;
 import net.derohimat.samplebasemvp.data.local.PreferencesHelper;
-import net.derohimat.samplebasemvp.data.remote.APIService;
+import net.derohimat.samplebasemvp.data.remote.ApiService;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -28,8 +28,8 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    public APIService provideApiService() {
-        return APIService.Factory.create(mBaseApplication);
+    public ApiService provideApiService() {
+        return ApiService.Factory.create(mBaseApplication);
     }
 
     @Provides

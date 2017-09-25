@@ -4,7 +4,7 @@ import android.content.Context;
 
 import net.derohimat.baseapp.presenter.BasePresenter;
 import net.derohimat.samplebasemvp.BaseApplication;
-import net.derohimat.samplebasemvp.data.remote.APIService;
+import net.derohimat.samplebasemvp.data.remote.ApiService;
 import net.derohimat.samplebasemvp.data.remote.model.forecast.Forecast;
 
 import javax.inject.Inject;
@@ -17,7 +17,7 @@ import timber.log.Timber;
 public class DetailPresenter implements BasePresenter<DetailView> {
 
     @Inject
-    APIService mAPIService;
+    ApiService mAPIService;
     private DetailView mDetailMvpView;
     private Subscription mSubscription;
     private Forecast mForecast;
@@ -44,7 +44,7 @@ public class DetailPresenter implements BasePresenter<DetailView> {
 
         if (mSubscription != null) mSubscription.unsubscribe();
 
-        BaseApplication baseApplication = BaseApplication.get(mDetailMvpView.getContext());
+        final BaseApplication baseApplication = BaseApplication.get(mDetailMvpView.getContext());
 
         mSubscription = mAPIService.getForecastForCity(weatherFromWhere, "metric", 7)
                 .observeOn(AndroidSchedulers.mainThread())
